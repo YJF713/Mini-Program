@@ -7,15 +7,22 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   //事件处理函数
+        //通过设置bindtap属性值来控制 -页面跳转
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  bindViewScroll:function(){
+    wx.navigateTo({
+      url: '../scroll/scroll?name=jack&age=18'
+    })
+  },
+  onLoad: function (e) {
+    console.log(e.from)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

@@ -1,0 +1,41 @@
+<!--pages/scroll/scroll.wxml-->
+<text>pages/scroll/scroll.wxml</text>
+<!-- 轮播 -->
+<scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+  <view id="demo1" class="scroll-view-item_H demo-text-1">A</view>
+  <view id="demo2"  class="scroll-view-item_H demo-text-2">B</view>
+  <view id="demo3" class="scroll-view-item_H demo-text-3">C</view>
+</scroll-view>
+<!-- 微信支付成功图片  -->
+<view class="icon-box">
+    <icon class="icon-box-img" type="success" size="93"></icon>
+     <icon class="icon-box-img" type="success" size="53"></icon>
+ </view>
+<!-- 小程序双向绑定数据 -->
+ <view class="page-section">
+    <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      </view>
+    </view>
+  </view>
+
+  <!--日期选择器  -->
+  <view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<!-- 跳转到指定页面 -->
+  <navigator url="/pages/index/index?from=scroll" 
+        hover-class="navigator-hover">home页面
+        </navigator>
+    <!-- 小程序页面传值比较简单，只能使用query的形式传值，(?and&)
+        在onLoad生命周期中通过e获取即可
+        设置这些参数时，可以直接写在url上，
+        也可以通过编译模式手动添加（设置-启动参数）-->
+        <view>页面上传过来的值：{{name}}、{{age}}</view>
