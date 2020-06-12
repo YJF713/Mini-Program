@@ -1,0 +1,7 @@
+<!--compontents/compontent.wxml-->
+<view class="component">
+  <input class="input" value="{{vall}}"></input>
+  <button size="mini" bindtap="add">+1</button>
+  <view>来自星星的问候 ：{{info}}</view>
+  <view>父组件传过来的数组：{{arr[2]}}</view>
+</view>

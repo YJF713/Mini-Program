@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    userAge:''
   },
   //事件处理函数
         //通过设置bindtap属性值来控制 -页面跳转
@@ -56,6 +57,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  getData(){
+    this.setData({
+      userAge:app.globalData.userAge
     })
   }
 })

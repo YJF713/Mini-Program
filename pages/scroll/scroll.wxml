@@ -8,7 +8,8 @@
 </scroll-view>
 <!-- 微信支付成功图片  -->
 <view class="icon-box">
-    <icon class="icon-box-img" type="success" size="93"></icon>
+    <icon class="icon-box-img" type="success" size="93"
+    bindtap="getInfo"></icon>
      <icon class="icon-box-img" type="success" size="53"></icon>
  </view>
 <!-- 小程序双向绑定数据 -->
@@ -38,4 +39,14 @@
         在onLoad生命周期中通过e获取即可
         设置这些参数时，可以直接写在url上，
         也可以通过编译模式手动添加（设置-启动参数）-->
-        <view>页面上传过来的值：{{name}}、{{age}}</view>
+ <view>页面上传过来的值：{{name}}、{{age}}</view>
+ <view>全局变量{{userAge}}</view>
+ <view>
+      小程序中存储数据的3种方式：
+      1、速度最快的方式：全局变量 ，globalData
+      2、速度较快的方式：本地缓存，getStorage
+      3、速度最慢的方式：网络请求
+ </view>
+ <!-- 引入组件 -->
+ <class2 info="abcd" arr="{{arr1}}" bindchangeVal="changeHardler"></class2>
+ <view>{{}}</view>

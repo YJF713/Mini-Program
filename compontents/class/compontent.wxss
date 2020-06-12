@@ -1,0 +1,12 @@
+/* compontents/compontent.wxss */
+.component{
+  width: 80%;
+  height: 100px;
+  margin-left: 10%;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+.input{
+  display: inline-block;
+  width: 600px;
+}

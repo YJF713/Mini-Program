@@ -1,3 +1,6 @@
+//获取应用实例
+const app = getApp()
+
 // pages/scroll/scroll.js
 Page({
 
@@ -7,7 +10,7 @@ Page({
   onShareAppMessage() {
     return {
       title: 'scroll',
-      path:'pages/scroll/scroll'
+      path:'pages/scroll/scroll',
     }
   },
   data: {
@@ -15,7 +18,10 @@ Page({
     inputValue:'',
     date:'2018-6-6',
     name:'',
-    age:''
+    age:'',
+    url: 'https://api.imjad.cn/cloudmusic/?type=lyric&id=28012031',
+    userAge: app.globalData.userAge,
+    arr1:[1,2,3,4]
   },
   scroll(e) {
     console.log(e)
@@ -43,6 +49,7 @@ Page({
     this.setData({
       inputValue:e.detail.value
     })
+    app.globalData.userAge=e.detail.value
   },
 //修改日期
   bindDateChange: function(e) {
@@ -52,7 +59,25 @@ Page({
     })
   },
 
-
+  getInfo(){
+    wx.request({
+      url: 'https://api.imjad.cn/cloudmusic/?type=lyric&id=28012031',
+      method:'GET',
+      success:res=>{
+        console.log(res.data.klyric.version);
+        // toast提示框
+        wx.showToast({
+          title: `歌词版本：${res.data.klyric.version}`,
+          icon:'success',
+          duration:1500
+        })
+      }
+    })
+  },
+//处理子组件发射的自定义事件
+changeHardler(e){
+  console.log(`子组件传过来的值：${e.detail}`)
+},
 
   /**
    * 生命周期函数--监听页面加载
