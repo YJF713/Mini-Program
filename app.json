@@ -10,6 +10,23 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+  "tabBar":{
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/index/index"
+      },
+      {
+        "text":"日志",
+        "pagePath":"pages/logs/logs"
+      },
+      {
+        "text":"二班",
+        "pagePath":"pages/scroll/scroll"
+      }
+    ]
+  },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -18,8 +18,13 @@ Page({
     })
   },
   bindViewScroll:function(){
-    wx.navigateTo({
-      url: '../scroll/scroll?name=jack&age=18'
+    // 如果是普通页面，则用navigateTo方法跳转
+        // wx.navigateTo({
+        //   url: '../scroll/scroll?name=jack&age=18'
+        // })
+    // 如果目标页面是tabBae页面，则需要switchTab方法跳转
+    wx.switchTab({
+      url: '../scroll/scroll',
     })
   },
   onLoad: function (e) {
