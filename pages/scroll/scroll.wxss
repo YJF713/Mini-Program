@@ -23,3 +23,11 @@
   width: 100%;
   height: 300rpx;
 }
+.van-col{
+  background-color: turquoise;
+  color: #fff;
+}
+.col-2 view{
+  background-color: violet;
+  color: #fff;
+}

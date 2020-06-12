@@ -49,4 +49,16 @@
  </view>
  <!-- 引入组件 -->
  <class2 info="abcd" arr="{{arr1}}" bindchangeVal="changeHardler"></class2>
- <view>{{}}</view>
+<!-- UI组件库  按钮-->
+<van-button type="default">默认</van-button>
+<van-button type="primary">主要</van-button>
+<van-button type="info">信息</van-button>
+<van-button type="warning">警告</van-button>
+<van-button type="danger">危险</van-button>
+
+<!-- 栅格 -->
+<van-row>
+  <van-col class="van-col" span="4">4</van-col>
+  <van-col class="van-col col-2" span="8"> 8</van-col>
+  <van-col class="van-col" offset="4" span="8"> 8</van-col>
+</van-row>

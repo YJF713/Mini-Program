@@ -27,6 +27,10 @@
     ]
   },
 
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents":{
+     "van-button": "@vant/weapp/button/index",
+     "van-row": "@vant/weapp/row/index",
+     "van-col": "@vant/weapp/col/index"
+  }
 }
