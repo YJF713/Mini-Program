@@ -1,7 +1,16 @@
 <!--index.wxml-->
-  <view class="top"> 
-   <van-icon class="seach" name="search"/>
-    <input class="inpt" type="text" placeholder="搜索" bindinput="bindInput" bindconfirm="setSearchStorage"></input>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
-<in_theaters></in_theaters>
-
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <button bindtap="bindViewScroll">scroll页面</button>
+       <button bindtap="getData">gloablDate</button>
+       <text>{{userAge}}</text>
+  </view>
+</view>

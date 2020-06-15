@@ -1,26 +1,21 @@
-.top{
-  background-color: #00B51D ;
-  width: 100%;
-  height: 30px;
-  position: relative;
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.inpt{
-  position: absolute;
-  width: 96%;
-  height: 20px;
-  border-radius: 4px;
-  text-align: center;
-  background-color: white;
-  font-size: 12px;
-  color: #ccc;
-  margin-left: 2%;
-  top: 2px;
-}
-.seach{
-    position: absolute;
-    color: #ccc;
-    left: 40%;
-    top: 25%;
-    z-index:999;
 
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
 }
