@@ -1,36 +1,41 @@
 {
+  "usingComponents": {
+    "van-rate": "@vant/weapp/rate/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+  "van-collapse-item": "@vant/weapp/collapse-item/index"
+    
+  },
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/scroll/scroll"
+    "pages/rank",
+    "pages/rank/rank",
+    "pages/my/my"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#fff"
   },
-  "tabBar":{
-    "list":[
+  "tabBar": {
+    "list": [
       {
-        "text":"首页",
-        "pagePath":"pages/index/index"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar/index.jpg",
+        "selectedIconPath": "images/tabBar/index-how.jpg"
       },
       {
-        "text":"日志",
-        "pagePath":"pages/logs/logs"
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "images/tabBar/rank.jpg",
+        "selectedIconPath": "images/tabBar/rank-how.jpg"
       },
       {
-        "text":"二班",
-        "pagePath":"pages/scroll/scroll"
+        "pagePath":"pages/my/my",
+        "text":"我的",
+        "iconPath":"images/tabBar/my.jpg",
+        "selectedIconPath": "images/tabBar/my-how.jpg"
       }
     ]
   },
-
-  "sitemapLocation": "sitemap.json",
-  "usingComponents":{
-     "van-button": "@vant/weapp/button/index",
-     "van-row": "@vant/weapp/row/index",
-     "van-col": "@vant/weapp/col/index"
-  }
+  "sitemapLocation": "sitemap.json"
 }

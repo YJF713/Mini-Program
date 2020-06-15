@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "in_theaters":"/compontents/in_theaters/in_theaters",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  },
+  
+  "navigationBarBackgroundColor": "#00B51D",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "首页"
+ 
 }
+

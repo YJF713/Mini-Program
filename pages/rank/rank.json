@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "in_theaters":"/compontents/in_theaters/in_theaters"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "榜单"
+}
